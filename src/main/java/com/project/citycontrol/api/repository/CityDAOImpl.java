@@ -7,11 +7,11 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.project.citycontrol.api.models.Cities;
+import com.project.citycontrol.api.models.City;
 
 @Repository
-public interface CitiesRepository extends JpaRepository<Cities, UUID>{
-	Optional<Cities> findByIbgeId (String ibgeId);
+public interface CitiesRepository extends JpaRepository<City, UUID>{
+	Optional<City> findByIbgeId (String ibgeId);
 	
-	List<Cities> findCitiesByUf(String uf);
+	List<City> findCitiesByUf(String uf);
 }
